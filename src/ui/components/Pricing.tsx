@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "./Button";
 
 type Tier = {
@@ -36,7 +35,7 @@ export function Pricing({ tiers }: { tiers: Tier[] }) {
             <Button
               as="a"
               href={t.cta.href}
-              variant={t.highlight ? "accent" : "outline"}
+              variant={t.highlight ? "primary" : "outline"}
             >
               {t.cta.label}
             </Button>

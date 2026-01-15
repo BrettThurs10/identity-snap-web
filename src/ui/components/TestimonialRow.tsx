@@ -1,5 +1,3 @@
-import React from "react";
-
 type T = { quote: string; who: string };
 export function TestimonialRow({ testimonials }: { testimonials: T[] }) {
   return (

@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Outlet, ScrollRestoration, useLocation } from "react-router-dom";
-import { TopNav } from "./components/TopNav";
 import { Footer } from "./components/Footer";
+import { TopNav } from "./components/TopNav";
 
 export function RootLayout() {
   const location = useLocation();

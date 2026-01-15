@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../ui/components/Button";
 import { Section } from "../ui/components/Section";

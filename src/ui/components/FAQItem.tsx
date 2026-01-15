@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 type Item = { q: string; a: string };
 export function FAQ({ items }: { items: Item[] }) {

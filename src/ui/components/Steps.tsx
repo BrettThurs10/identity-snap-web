@@ -1,4 +1,3 @@
-import React from "react";
 type Step = { title: string; body: string; image?: string };
 export function Steps({ steps }: { steps: Step[] }) {
   return (

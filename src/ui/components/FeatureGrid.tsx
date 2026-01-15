@@ -1,5 +1,3 @@
-import React from "react";
-
 type Item = { title: string; body: string };
 export function FeatureGrid({ items }: { items: Item[] }) {
   return (
