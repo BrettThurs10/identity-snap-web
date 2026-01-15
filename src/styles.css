@@ -87,6 +87,48 @@ a:hover {
   padding: 70px 0;
 }
 
+@media (max-width: 600px) {
+  .section {
+    padding: 32px 0;
+  }
+  .section.hero {
+    padding-top: 48px;
+  }
+  .section.cta {
+    padding: 36px 0;
+  }
+  .section.footnote {
+    padding-top: 10px;
+    padding-bottom: 22px;
+  }
+  .h1 {
+    font-size: 2rem;
+    margin: 10px 0 8px;
+  }
+  .h2 {
+    font-size: 1.25rem;
+  }
+  .lead {
+    font-size: 1rem;
+    max-width: 90vw;
+  }
+  .stepImage {
+    height: auto !important;
+    aspect-ratio: 2/4;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  .priceCard {
+    padding: 10px;
+  }
+  .ctaBox {
+    padding: 8px;
+  }
+  .storeRow img {
+    height: 48px !important;
+  }
+}
+
 .section-bg-alt {
   background: var(--panel2);
 }

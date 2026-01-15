@@ -155,7 +155,7 @@ export function LandingPage() {
             },
             {
               title: "Quality control",
-              body: "Low-confidence scans get flagged so you can fix them while the card is still in your hand.",
+              body: "Low-confidence scans are flagged for quick review and correction.",
             },
             {
               title: "Export + share",
@@ -226,7 +226,7 @@ export function LandingPage() {
                 "Organize by event",
               ],
               cta: {
-                label: "App Store",
+                label: "Download iOS",
                 href: "https://apps.apple.com/us/app/identitysnap/id6757811330",
               },
               highlight: true,
@@ -299,54 +299,48 @@ export function LandingPage() {
 
       {/* WAITLIST SIGNUP */}
       <Section className="cta" id="get" bg="dark">
-        <div className="ctaBox" style={{ padding: 104 }}>
+        <div className="ctaBox" style={{ padding: 64 }}>
           <div className="sectionHead" style={{ textAlign: "center" }}>
-            <h2 className="h2">Join the waitlist for premium features</h2>
-            <p className="sub">
-              Get early access to cloud sync, dashboard, and team collaboration.
-              No spam—just a heads up when it’s ready.
-            </p>
-          </div>
-          <form
-            action="https://formspree.io/f/your-form-id" // Replace with your Formspree or backend endpoint
-            method="POST"
-            style={{
-              maxWidth: 400,
-              margin: "0 auto",
-              display: "flex",
-              flexDirection: "column",
-              gap: 12,
-            }}
-          >
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="Your email address"
+            <h2 className="h2">Join the waitlist for premium features like:</h2>
+
+            <div
               style={{
-                padding: 12,
-                borderRadius: 8,
-                border: "1px solid #ccc",
-                fontSize: 16,
-                textAlign: "center",
-              }}
-            />
-            <button
-              type="submit"
-              style={{
-                padding: 12,
-                borderRadius: 8,
-                background: "var(--primary)",
-                color: "#fff",
-                fontWeight: 600,
-                fontSize: 16,
-                border: "none",
-                cursor: "pointer",
+                display: "flex",
+                flexDirection: "column",
+                gap: 8,
+                alignItems: "center",
+                paddingTop: 16,
+                paddingBottom: 16,
               }}
             >
-              Join Waitlist
-            </button>
-          </form>
+              <span>Cloud sync across devices</span>
+              <span>Web dashboard for lead management</span>
+              <span>Team collaboration tools</span>
+              <span>CRM integrations</span>
+              <span>Advanced analytics and exports</span>
+            </div>
+            <p>No spam—just a heads up when it’s ready.</p>
+          </div>
+          <a
+            href="https://forms.gle/rk1THij1poyEDEVY9"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-block",
+              padding: 12,
+              borderRadius: 8,
+              background: "var(--primary)",
+              color: "#fff",
+              fontWeight: 600,
+              fontSize: 16,
+              border: "none",
+              cursor: "pointer",
+              textDecoration: "none",
+              margin: "0 auto",
+            }}
+          >
+            Join Waitlist
+          </a>
         </div>
       </Section>
 
