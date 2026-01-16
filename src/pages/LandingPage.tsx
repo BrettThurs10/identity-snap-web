@@ -244,7 +244,7 @@ export function LandingPage() {
               highlight: true,
             },
             {
-              name: "Premium (planned)",
+              name: "Premium (coming soon)",
               price: "TBD",
               blurb: "For teams and multi-device workflows.",
               features: [

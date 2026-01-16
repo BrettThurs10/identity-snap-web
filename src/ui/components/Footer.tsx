@@ -7,6 +7,20 @@ export function Footer() {
         <div className="micro muted">
           © {new Date().getFullYear()} IdentitySnap
         </div>
+        <div className="micro" style={{ marginTop: 4 }}>
+          <a
+            href="https://github.com/BrettThurs10"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "inherit", textDecoration: "underline dotted" }}
+          >
+            Made with{" "}
+            <span role="img" aria-label="heart">
+              ❤️
+            </span>{" "}
+            in Mobile, AL
+          </a>
+        </div>
         <div className="footerLinks">
           <Link to="/privacy" className="micro">
             Privacy
