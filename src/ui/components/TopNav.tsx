@@ -5,7 +5,15 @@ export function TopNav() {
     <header className="topnav">
       <div className="container topnavInner">
         <Link to="/" className="brand" aria-label="IdentitySnap home">
-          <span className="brandMark" />
+          <span
+            className="material-symbols-outlined"
+            style={{
+              fontSize: 22,
+              verticalAlign: "middle",
+            }}
+          >
+            badge
+          </span>
           <span className="brandText">IdentitySnap</span>
         </Link>
 

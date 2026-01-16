@@ -12,6 +12,8 @@ export function Steps({ steps }: { steps: Step[] }) {
               }
               alt={s.title + " app preview"}
               className="stepImage"
+              loading="lazy"
+              decoding="async"
               style={{
                 width: "100%",
                 aspectRatio: "2/4",

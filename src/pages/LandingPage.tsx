@@ -5,8 +5,16 @@ import { Pill } from "../ui/components/Pill";
 import { Pricing } from "../ui/components/Pricing";
 import { Section } from "../ui/components/Section";
 import { Steps } from "../ui/components/Steps";
+import { useEffect } from "react";
 
 export function LandingPage() {
+  const downloadIOSURL =
+    "https://apps.apple.com/us/app/identitysnap/id6757811330";
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.dispatchEvent(new Event("prerender-ready"));
+    }
+  }, []);
   return (
     <div>
       {/* HERO */}
@@ -18,16 +26,20 @@ export function LandingPage() {
               <Pill>No account required</Pill>
               <Pill>Keeps images</Pill>
             </div>
-            <h1 className="h1">Snap the moment. Keep the lead.</h1>
+            <h1 className="h1">
+              Offline Business Card & Badge Scanner for Events
+            </h1>
+            <p className="sub">Snap the moment. Keep the lead.</p>
             <p className="lead">
               IdentitySnap turns real-world conversations into follow-ups you
               can actually do. Scan business cards and badges, review instantly,
-              then export or share—without relying on Wi‑Fi.
+              then export or share—without relying on Wi‑Fi. Built for
+              exhibitors, conference teams, recruiters, and field sales.
             </p>
 
             <div className="ctaRow">
               <a
-                href="https://apps.apple.com/us/app/identitysnap/id6757811330"
+                href={downloadIOSURL}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-cta="hero-primary"
@@ -68,7 +80,7 @@ export function LandingPage() {
           >
             <img
               src="/images/preview.png"
-              alt="App preview screenshot"
+              alt="IdentitySnap app preview showing offline scanning of a conference badge and a saved lead"
               style={{
                 width: "100%",
                 maxWidth: 600,
@@ -227,7 +239,7 @@ export function LandingPage() {
               ],
               cta: {
                 label: "Download iOS",
-                href: "https://apps.apple.com/us/app/identitysnap/id6757811330",
+                href: downloadIOSURL,
               },
               highlight: true,
             },
@@ -242,7 +254,7 @@ export function LandingPage() {
                 "Analytics + advanced exports",
                 "CRM integrations",
               ],
-              cta: { label: "Join waitlist", href: "#get" },
+              cta: { label: "Join waitlist", href: "#waitlist" },
             },
           ]}
         />
@@ -265,7 +277,7 @@ export function LandingPage() {
           <div className="storeRow" style={{ justifyContent: "center" }}>
             {/* Replace these links with your App Store / Play Store URLs */}
             <a
-              href="https://example.com"
+              href={downloadIOSURL}
               target="_blank"
               rel="noopener noreferrer"
               data-cta="store-ios"
@@ -279,7 +291,7 @@ export function LandingPage() {
             </a>
             {/* <Button
               as="a"
-              href="https://example.com"
+              href={downloadAndroidURL}
               variant="outline"
               data-cta="store-android"
             >
@@ -297,8 +309,42 @@ export function LandingPage() {
         </div>
       </Section>
 
+      {/* FAQ */}
+      <Section bg="dual-radial">
+        <div className="sectionHead">
+          <h2 className="h2">FAQ</h2>
+          <p className="sub">
+            The stuff your skeptical brain will ask (as it should).
+          </p>
+        </div>
+        <FAQ
+          items={[
+            {
+              q: "Do I need an account?",
+              a: "No. IdentitySnap works without sign-up. Your data stays on your device.",
+            },
+            {
+              q: "Does it work offline?",
+              a: "Yes—scanning, review, and organizing are offline-first.",
+            },
+            {
+              q: "Can I export to my CRM?",
+              a: "You can export a CSV today. Premium will add a dashboard and more integrations.",
+            },
+            {
+              q: "Do you store my contacts on a server?",
+              a: "Not in the free tier. Premium sync will be optional and explicit.",
+            },
+            {
+              q: "Can I share leads with my team?",
+              a: "Yes. You can share lead list files (including images) via AirDrop / Nearby Share, etc.",
+            },
+          ]}
+        />
+      </Section>
+
       {/* WAITLIST SIGNUP */}
-      <Section className="cta" id="get" bg="dark">
+      <Section className="cta" id="waitlist" bg="dark">
         <div className="ctaBox" style={{ padding: 64 }}>
           <div className="sectionHead" style={{ textAlign: "center" }}>
             <h2 className="h2">Join the waitlist for premium features like:</h2>
@@ -342,40 +388,6 @@ export function LandingPage() {
             Join Waitlist
           </a>
         </div>
-      </Section>
-
-      {/* FAQ */}
-      <Section bg="dual-radial">
-        <div className="sectionHead">
-          <h2 className="h2">FAQ</h2>
-          <p className="sub">
-            The stuff your skeptical brain will ask (as it should).
-          </p>
-        </div>
-        <FAQ
-          items={[
-            {
-              q: "Do I need an account?",
-              a: "No. IdentitySnap works without sign-up. Your data stays on your device.",
-            },
-            {
-              q: "Does it work offline?",
-              a: "Yes—scanning, review, and organizing are offline-first.",
-            },
-            {
-              q: "Can I export to my CRM?",
-              a: "You can export a CSV today. Premium will add a dashboard and more integrations.",
-            },
-            {
-              q: "Do you store my contacts on a server?",
-              a: "Not in the free tier. Premium sync will be optional and explicit.",
-            },
-            {
-              q: "Can I share leads with my team?",
-              a: "Yes. You can share lead list files (including images) via AirDrop / Nearby Share, etc.",
-            },
-          ]}
-        />
       </Section>
 
       {/* FOOTER NOTE */}
