@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build && npm run postbuild",
-    "postbuild": "node copy-cname.js",
+    "postbuild": "node copy-cname.cjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
