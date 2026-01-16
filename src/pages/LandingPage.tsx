@@ -6,6 +6,7 @@ import { Pricing } from "../ui/components/Pricing";
 import { Section } from "../ui/components/Section";
 import { Steps } from "../ui/components/Steps";
 import { useEffect } from "react";
+import * as seline from "@seline-analytics/web";
 
 export function LandingPage() {
   const downloadIOSURL =
@@ -14,6 +15,10 @@ export function LandingPage() {
     if (typeof document !== "undefined") {
       document.dispatchEvent(new Event("prerender-ready"));
     }
+    seline.init({
+      cookie: true,
+    });
+    seline.enableCookieMode();
   }, []);
   return (
     <div>
@@ -44,6 +49,14 @@ export function LandingPage() {
                 rel="noopener noreferrer"
                 data-cta="hero-primary"
                 style={{ display: "inline-block" }}
+                onClick={() => {
+                  if (seline && typeof seline.track === "function") {
+                    seline.track("App Store Download Clicked", {
+                      location: "hero section",
+                      platform: "web",
+                    });
+                  }
+                }}
               >
                 <img
                   src="/images/appleAppstore.png"
@@ -282,6 +295,12 @@ export function LandingPage() {
               rel="noopener noreferrer"
               data-cta="store-ios"
               style={{ display: "inline-block" }}
+              onClick={() => {
+                seline.track("App Store Download Clicked", {
+                  location: "cta section",
+                  platform: "web",
+                });
+              }}
             >
               <img
                 src="/images/appleAppstore.png"

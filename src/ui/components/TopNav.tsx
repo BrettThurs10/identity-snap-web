@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import * as seline from "@seline-analytics/web";
 
 export function TopNav() {
   return (
@@ -36,6 +37,12 @@ export function TopNav() {
             rel="noopener noreferrer"
             data-cta="nav-get"
             style={{ display: "inline-block", padding: 0 }}
+            onClick={() => {
+              seline.track("App Store Download Clicked", {
+                location: "top nav",
+                platform: "web",
+              });
+            }}
           >
             <img
               src="/images/appleAppstore.png"
