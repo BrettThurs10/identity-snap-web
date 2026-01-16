@@ -411,12 +411,8 @@ export function LandingPage() {
 
       {/* FOOTER NOTE */}
       <Section className="footnote">
-        <p className="micro muted">
+        <p className="micro muted" style={{ textAlign: "center" }}>
           IdentitySnap is a product focused on privacy-respecting lead capture.
-          “Snap the moment. Keep the lead.”
-          <span style={{ marginLeft: 8 }}>
-            <Link to="/privacy">Privacy</Link> · <Link to="/terms">Terms</Link>
-          </span>
         </p>
       </Section>
     </div>
